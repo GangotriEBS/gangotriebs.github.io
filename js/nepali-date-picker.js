@@ -54,7 +54,7 @@ year--;return(Math.floor(year/4)-Math.floor(year/100)+Math.floor(year/400));};th
 return false;if(month<1||month>12)
 return false;if(date<1||date>31)
 return false;return true;};this.isLeapYear=function(year){if(year%4===0){return(year%100===0)?(year%400===0):true;}else
-return false;};this.setNepaliDate=function(year,month,date){if(!this.isNepaliRange(year,month,date)){console.log('Invalid Date Format');return;}
+return false;};this.setNepaliDate=function(year,month,date){if(!this.isNepaliRange(year,month,date)){return;}
 this.nepaliYear=year;this.nepaliMonth=month;this.nepaliDate=date;this.englishYear=1944;this.englishMonth=1;this.englishDate=1;var difference=this.getNepaliDateDifference(2000,9,17);while(difference>=(this.isLeapYear(this.englishYear)?366:365)){difference=difference-(this.isLeapYear(this.englishYear)?366:365);this.englishYear++;}
 var monthDays=this.isLeapYear(this.englishYear)?this.englishLeapMonths:this.englishMonths;var i=0;while(difference>=monthDays[i]){this.englishMonth++;difference=difference-monthDays[i];i++;}
 this.englishDate=this.englishDate+difference;this.getDay();};this.toNepaliString=function(format){if(typeof(format)==='undefined')
