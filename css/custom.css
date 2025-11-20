@@ -148,6 +148,11 @@ img {
   z-index: 2;
 }
 
+.abt-img .masonary li {
+  position: relative;
+  z-index: 1;
+}
+
 .abt-img .masonary {
   position: relative;
   z-index: 1;

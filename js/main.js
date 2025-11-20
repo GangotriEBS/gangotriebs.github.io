@@ -48,4 +48,10 @@
       toggleMenu(false);
     }
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 991 && menuContainer.classList.contains('active')) {
+      toggleMenu(false);
+    }
+  });
 })();
