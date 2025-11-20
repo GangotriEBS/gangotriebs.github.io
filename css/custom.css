@@ -313,4 +313,20 @@ img {
   background: var(--brand);
   color: #fff;
 }
+
+.avt-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about-page-content .row {
+  margin-bottom: 30px;
+}
+
+.about-page-content .section-title,
+.about-page-content .act-inffo {
+  padding: 20px 0;
+}
 }
