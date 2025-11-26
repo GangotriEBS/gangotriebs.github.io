@@ -10,6 +10,7 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --faculty-card-size: 400px;
 }
 
 body.scroll-hide {
@@ -42,6 +43,7 @@ header {
   top: 0;
   z-index: 999;
   transition: var(--transition);
+  padding: 0.5rem 0;
 }
 
 header:hover {
@@ -241,6 +243,7 @@ header:hover {
     padding: 88px 24px 32px;
     transition: right 0.35s ease;
     z-index: 1000;
+    pointer-events: auto;
   }
 
   .responsive-menu.active {
@@ -263,6 +266,7 @@ header:hover {
     font-size: 16px;
     padding-bottom: 4px;
     border-bottom: 1px solid #e5e7eb;
+    pointer-events: auto;
   }
 
   .responsive-menu ul li a:focus-visible {
@@ -307,7 +311,11 @@ header:hover {
 }
 
 .main-banner {
-  padding: clamp(2rem, 2vw + 1.5rem, 4rem) 0;
+  padding: clamp(1.5rem, 2vw + 1rem, 3rem) 0;
+}
+
+.banner-text {
+  padding-right: 0;
 }
 
 .banner-text h2 {
@@ -319,6 +327,7 @@ header:hover {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: fadeInUp 1s ease;
+  margin-bottom: 1rem;
 }
 
 @keyframes fadeInUp {
@@ -351,6 +360,11 @@ header:hover {
 .banner-text p {
   color: var(--muted);
   font-size: clamp(1rem, 1vw + 0.9rem, 1.125rem);
+  margin-bottom: 1.5rem;
+}
+
+.banner-cta {
+  margin-top: 1.5rem;
 }
 
 .btn-default-home {
@@ -821,6 +835,7 @@ footer .bottom-footer {
   position: relative;
   overflow: hidden;
   padding-top: 100%; /* 1:1 aspect ratio */
+  background: #f3f4f6;
 }
 
 .teacher-img img {
