@@ -74,9 +74,7 @@
       }
 
       if (email) {
-        var emailVal = email.value.trim();
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailVal || !emailPattern.test(emailVal)) {
+        if (!email.value.trim() || !email.validity.valid) {
           var emailError = document.getElementById('cf-email-error');
           if (emailError) emailError.textContent = 'Please enter a valid email address.';
           valid = false;
